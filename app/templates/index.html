@@ -16,7 +16,175 @@
 </head>
 
 <body>
-    
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/tableau1">Tableau Dashboard 1</a>
+              </li>
+              <li class="nav-item"></li>
+                <a class="nav-link" href="/tableau2">Tableau Dashboard 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/model">Machine Learning</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/report">Report</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about_us">About Us</a>              
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/sources">Sources</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="text-center">
+        <br>
+        <p style="font-size:30px">Passenger Satisfaction Predictor</p>
+        <hr>
+        <div class="container">
+          <div class="card border-primary mb-3">
+            <div class="card-header">Enter customer flight information and ratings to determine whether or not they were satisfied with their flight.</div>
+            <div class="card-body">
+                <div class="row">
+                    <!-- <div class="col-md-4"> -->
+                        <div class="form-group col-md-3">
+                          <label class="col-form-label" for="gender">Gender:</label> <br>
+                          <select id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                          </select>
+                        </div>
+                        <!-- Below here needs to be updated -->
+
+                        <!-- <div class="form-group col-md-3">
+                          <label class="col-form-label" for="Own_car">Do you own a car?</label> <br>
+                          <select id="Own_car">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label class="col-form-label" for="Own_property">Do you own property?</label> <br>
+                          <select id="Own_property">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label class="col-form-label" for="Unemployed">Are you employed?</label> <br>
+                          <select id="Unemployed">
+                            <option value="0">Yes</option>
+                            <option value="1">No</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label class="col-form-label" for="Family_status">Marital status:</label> <br>
+                          <select id="Family_status">
+                            <option value="Single" selected>Single</option>
+                            <option value="Civil Marriage">Civil Marriage</option>
+                            <option value="Married">Married</option>
+                            <option value="Separated">Separated</option>
+                            <option value="Widow">Widowed</option>
+                          </select>
+                        </div>
+                      <div class="form-group col-md-3">
+                        <label class="col-form-label" for="Education_type">Education Type:</label> <br>
+                        <select id="Education_type">
+                          <option value="Academic Degree" selected>Academic Degree</option>
+                          <option value="Higher Education">Higher Education</option>
+                          <option value="Incomplete Higher Education">Incomplete Higher Education</option>
+                          <option value="Lower Secondary">Lower Secondary</option>
+                          <option value="Secondary">Secondary</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label class="col-form-label" for="Housing_type">Housing Type:</label> <br>
+                        <select id="Housing_type">
+                          <option value="Co-op Apartment" selected>Co-op Apartment</option>
+                          <option value="House">House</option>
+                          <option value="Municipal apartment">Municipal apartment</option>
+                          <option value="Office apartment">Office apartment</option>
+                          <option value="Rented apartment">Rented apartment</option>
+                          <option value="Living with parents">Living with parents</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label class="col-form-label" for="Income_type">Income Type:</label> <br>
+                        <select id="Income_type">
+                          <option value="Commercial Associate" selected>Commercial Associate</option>
+                          <option value="Pensioner">Pensioner</option>
+                          <option value="State Servant">State Servant</option>
+                          <option value="Student">Student</option>
+                          <option value="Working">Working</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label class="col-form-label" for="Occupation_type">Occupation Type:</label> <br>
+                        <select id="Occupation_type">
+                          <option value="Accountant" selected>Accountant</option>
+                          <option value="Cleaner">Cleaner</option>
+                          <option value="Cooking">Cooking</option>
+                          <option value="Core Staff">Core Staff</option>
+                          <option value="Driver">Driver</option>
+                          <option value="High Skill Tech">High Skill Tech</option>
+                          <option value="Laborer">Laborer</option>
+                          <option value="Manager">Manager</option>
+                          <option value="Medicine">Medicine</option>
+                          <option value="Sales">Sales</option>
+                          <option value="Security">Security</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label class="col-form-label" for="Age">Age:</label> <br>
+                        <input type="text" class="form-control" value="30" id="Age">
+                      </div> 
+                        <div class="form-group col-md-3">
+                          <label class="col-form-label" for="Num_children">Number of Children:</label> <br>
+                          <input type="text" class="form-control" value="0" id="Num_children">
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label class="col-form-label" for="Num_family">Number in family:</label> <br>
+                          <input type="text" class="form-control" value="2" id="Num_family">
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label class="col-form-label" for="Account_length">Account Length (in months):</label> <br>
+                          <input type="text" class="form-control" value="1" id="Account_length">
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label class="col-form-label" for="Total_income">Total Income (in USD, no commas):</label> <br>
+                          <input type="text" class="form-control" value="40000" id="Total_income">
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label class="col-form-label" for="Years_employed">Years Employed:</label> <br>
+                          <input type="text" class="form-control" value="1" id="Years_employed">
+                        </div>
+                        <div style="padding: 30px" class="col-md-3 text-center">
+                          <button type="button" class="btn btn-primary" id="filter">Make Prediction!</button>
+                        </div> -->
+</div>
+<hr style="color:lightgray; border-width: 3px;">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+    <h2 id="output"></h2>
+</div>
+</div>
+</div>
+</div>
+
 
 </body>
 
