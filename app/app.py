@@ -38,7 +38,7 @@ def model():
 # HTML ROUTES - REPORT
 @app.route("/report")
 def report():
-    return report("report.html")
+    return render_template("report.html")
 
 # HTML ROUTES - ABOUT US 
 @app.route("/about_us")
