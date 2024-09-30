@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, redirect
 import pandas as pd
 import numpy as np
 from modelHelper import ModelHelper
@@ -56,10 +56,10 @@ def predictions():
     print(content)
 
     # parse
-    gender = int(content["gender"])
-    customer_type = int(content["customer_type"])
-    age = int(content["age"])
-    type_of_travel = int(content["type_of_travel"])
+    gender = content["gender"]
+    customer_type = content["customer_type"]
+    age = float(content["age"])
+    type_of_travel = content["type_of_travel"]
     travel_class = content["travel_class"]
     flight_distance = content["flight_distance"]
     inflight_wifi_service = int(content["inflight_wifi_service"])

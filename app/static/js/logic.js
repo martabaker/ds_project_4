@@ -73,7 +73,7 @@ function predictions() {
             if (prob > 0.5) {
                 $("#output").text(`The passenger is likely to be satisfied with the flight with a satisfaction rating of ${prob}!`);
             } else {
-                $("#output").text(`Unfortunately, the passenger is unlikely to be satisfied with the flight with a satisfaction rating of ${prob}`);
+                $("#output").text(`Unfortunately, the passenger is unlikely to be satisfied with the flight with a satisfaction rating of ${prob}.`);
             }
 
         },
