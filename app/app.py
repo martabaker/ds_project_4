@@ -60,8 +60,8 @@ def predictions():
     customer_type = int(content["customer_type"])
     age = int(content["age"])
     type_of_travel = int(content["type_of_travel"])
-    travel_class = content["travel_class"]
-    flight_distance = content["flight_distance"]
+    travel_class = str(content["travel_class"])
+    flight_distance = str(content["flight_distance"])
     inflight_wifi_service = int(content["inflight_wifi_service"])
     departure_arrival_time_convenient = int(content["departure_arrival_time_convenient"])
     ease_of_online_booking = int(content["ease_of_online_booking"])
@@ -76,8 +76,8 @@ def predictions():
     checkin_service = int(content["checkin_service"])
     inflight_service = int(content["inflight_service"])
     cleanliness = int(content["cleanliness"])
-    departure_delay_in_minutes = content["departure_delay_in_minutes"]
-    arrival_delay_in_minutes =  content["arrival_delay_in_minutes"]
+    departure_delay_in_minutes = str(content["departure_delay_in_minutes"])
+    arrival_delay_in_minutes =  str(content["arrival_delay_in_minutes"])
 
     preds = modelHelper.predictions(gender, customer_type, age, type_of_travel, travel_class, flight_distance, inflight_wifi_service, departure_arrival_time_convenient,
                ease_of_online_booking, gate_location, food_and_drink, online_boarding, seat_comfort, inflight_entertainment, on_board_service,

@@ -16,258 +16,302 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/tableau1">Tableau Dashboard 1</a>
-              </li>
-              <li class="nav-item"></li>
-                <a class="nav-link" href="/tableau2">Tableau Dashboard 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="/model">Machine Learning</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/report">Report</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about_us">About Us</a>              
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/sources">Sources</a>
-              </li>
-            </ul>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark"></nav>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <h4><a class="nav-link" href="/Home">Home</a></h4>
+        </li>
+        <li class="nav-item">
+          <h4><a class="nav-link" href="/tableau1">Tableau Dashboard 1</a></h4>
+        </li>
+        <li class="nav-item">
+          <h4><a class="nav-link" href="/tableau2">Tableau Dashboard 2</a></h4>
+        </li>
+        <li class="nav-item">
+          <h4><a class="nav-link active" href="/model">Machine Learning</a></h4>
+        </li>
+        <li class="nav-item">
+          <h4><a class="nav-link" href="/report">Report</a></h4>
+        </li>
+        <li class="nav-item">
+          <h4><a class="nav-link" href="/about_us">About Us</a></h4>              
+        </li>
+        <li class="nav-item">
+          <h4><a class="nav-link" href="/sources">Sources</a></h4>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+  <div class="text-center">
+    <br>
+    <p style="font-size:30px">Passenger Satisfaction Predictor</p>
+    <hr>
+    <div class="container">
+      <div class="card border-primary mb-3">
+        <div class="card-header">Enter customer's flight information and ratings to determine whether or not they were satisfied with their flight.</div>
+        <div class="card-body">
+          <div class="row">
+            <!-- <div class="col-md-4"> -->
+            <div class="form-group col-md-3">
+              <label class="col-form-label" for="gender">Customer Gender:</label> <br>
+                <select id="gender">
+                  <option value="0">Male</option>
+                  <option value="1">Female</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label class="col-form-label" for="customer_type">Customer Type:</label> <br>
+                <select id="customer_type">
+                  <option value="0">Disloyal Customer</option>
+                  <option value="1">Loyal Customer</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="age">Customer Age:</label> <br>
+              <input type="text" class="form-control" value="30" id="age">
+            </div>
+            <div class="form-group col-md-3">
+              <label class="col-form-label" for="type_of_travel">Type of Travel:</label> <br>
+                <select id="type_of_travel">
+                  <option value="0">Personal</option>
+                  <option value="1">Business</option>
+                </select>
+             </div>
+             <div class="form-group col-md-3">
+                <label class="col-form-label" for="travel_class">Travel Class:</label> <br>
+                  <select id="travel_class">
+                    <option value="Business">Business</option>
+                    <option value="Eco">Economy</option>
+                    <option value="Eco Plus">Economy Plus</option>
+                  </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label class="col-form-label" for="inflight_wifi_service">In-flight Wifi:</label> <br>
+                <select id="inflight_wifi_service">
+                  <option value="0">N/A</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="departure_arrival_time_convenient">Convenient Departure/Arrival Time:</label> <br>
+              <select id="departure_arrival_time_convenient">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="ease_of_online_booking">Ease of Online Booking:</label> <br>
+              <select id="ease_of_online_booking">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="gate_location">Gate Location:</label> <br>
+              <select id="gate_location">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="food_and_drink">Food and Drinks:</label> <br>
+              <select id="food_and_drink">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="online_boarding">Online Boarding:</label> <br>
+              <select id="online_boarding">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="seat_comfort">Seat Comfort:</label> <br>
+              <select id="seat_comfort">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="inflight_entertainment">In-flight Entertainment:</label> <br>
+              <select id="inflight_entertainment">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="on_board_service">On-board Service:</label> <br>
+              <select id="on_board_service">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="leg_room_service">Leg Room:</label> <br>
+              <select id="leg_room_service">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="baggage_handling">Baggage Handling:</label> <br>
+              <select id="baggage_handling">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="checkin_service">Check-in:</label> <br>
+              <select id="checkin_service">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="inflight_service">In-flight Service:</label> <br>
+              <select id="inflight_service">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3"></div>
+              <label class="col-form-label" for="cleanliness">Cleanliness of Plane:</label> <br>
+              <select id="cleanliness">
+                <option value="0">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label class="col-form-label" for="flight_distance">Flight Distance (miles):</label> <br>
+              <select id="flight_distance">
+                <option value="0-100">0-99</option>
+                <option value="100-199">100-199</option>
+                <option value="200-299">200-299</option>
+                <option value="300-399">300-399</option>
+                <option value="400-499">400-499</option>
+                <option value="500-599">500-599</option>
+                <option value="600-799">600-799</option>
+                <option value="800-999">800-999</option>
+                <option value="1000-1499">1000-1499</option>
+                <option value="1500-1999">1500-1999</option>
+                <option value="2000-2999">2000-2999</option>
+                <option value="3000-4999">3000-4999</option>
+              </select>
+            </div> 
+            <div class="form-group col-md-3">
+              <label class="col-form-label" for="departure_delay_in_minutes">Departure Delay (minutes):</label> <br>
+              <select id="departure_delay_in_minutes">
+                <option value="0-29">0-29</option>
+                <option value="30-59">30-59</option>
+                <option value="60-119">60-119</option>
+                <option value="120-179">120-179</option>
+                <option value="180-239">180-239</option>
+                <option value="240-299">240-299</option>
+                <option value="300-359">300-359</option>
+                <option value="360-419">360-419</option>
+                <option value="420-479">420-479</option>
+                <option value="480-1999">480-1999</option>
+              </select>
+            </div> 
+            <div class="form-group col-md-3">
+              <label class="col-form-label" for="arrival_delay_in_minutes">Arrival Delay (minutes):</label> <br>
+              <select id="arrival_delay_in_minutes">
+                <option value="0-29">0-29</option>
+                <option value="30-59">30-59</option>
+                <option value="60-119">60-119</option>
+                <option value="120-179">120-179</option>
+                <option value="180-239">180-239</option>
+                <option value="240-299">240-299</option>
+                <option value="300-359">300-359</option>
+                <option value="360-419">360-419</option>
+                <option value="420-479">420-479</option>
+                <option value="480-1999">480-1999</option>
+              </select>
+            </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <button type="button" class="btn btn-primary" id="filter">Make Prediction!</button>
+            </div>
           </div>
         </div>
-      </nav>
-      <div class="text-center">
-        <br>
-        <p style="font-size:30px">Passenger Satisfaction Predictor</p>
-        <hr>
-        <div class="container">
-          <div class="card border-primary mb-3">
-            <div class="card-header">Enter customer flight information and ratings to determine whether or not they were satisfied with their flight.</div>
-            <div class="card-body">
-                <div class="row">
-                    <!-- <div class="col-md-4"> -->
-                        <div class="form-group col-md-3">
-                          <label class="col-form-label" for="gender">Gender:</label> <br>
-                          <select id="gender">
-                            <option value="0">Male</option>
-                            <option value="1">Female</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label class="col-form-label" for="customer_type">Customer Type:</label> <br>
-                            <select id="customer_type">
-                              <option value="1">Loyal Customer</option>
-                              <option value="0">Disloyal Customer</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label class="col-form-label" for="type_of_travel">Type of Travel:</label> <br>
-                            <select id="type_of_travel">
-                              <option value="0">Personal</option>
-                              <option value="1">Business</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label class="col-form-label" for="travel_class">Travel Class:</label> <br>
-                            <select id="travel_class">
-                              <option value="Business">Business</option>
-                              <option value="Eco">Economy</option>
-                              <option value="Eco Plus">Economy Plus</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label class="col-form-label" for="inflight_wifi_service">Inflight Wifi:</label> <br>
-                            <select id="inflight_wifi_service">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="departure_arrival_time_convenient">Convenient Departure/Arrival Time:</label> <br>
-                            <select id="departure_arrival_time_convenient">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="ease_of_online_booking">Ease of Online Booking:</label> <br>
-                            <select id="ease_of_online_booking">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="gate_location">Gate Location:</label> <br>
-                            <select id="gate_location">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="food_and_drink">Food and Drinks:</label> <br>
-                            <select id="food_and_drink">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="online_boarding">Online Boarding:</label> <br>
-                            <select id="online_boarding">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="seat_comfort">Seat Comfort:</label> <br>
-                            <select id="seat_comfort">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="inflight_entertainment">Inflight Entertainment:</label> <br>
-                            <select id="inflight_entertainment">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="on_board_service">On-board Service:</label> <br>
-                            <select id="on_board_service">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="leg_room_service">Leg Room:</label> <br>
-                            <select id="leg_room_service">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="baggage_handling">Baggage Handling:</label> <br>
-                            <select id="baggage_handling">
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="checkin_service">Check-in:</label> <br>
-                            <select id="checkin_service">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="inflight_service">Inflight Service:</label> <br>
-                            <select id="inflight_service">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3"></div>
-                            <label class="col-form-label" for="cleanliness">Cleanliness:</label> <br>
-                            <select id="cleanliness">
-                              <option value="0">N/A</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label class="col-form-label" for="age">Age:</label> <br>
-                            <input type="text" class="form-control" value="30" id="age">
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label class="col-form-label" for="flight_distance">Flight Distance (miles):</label> <br>
-                            <input type="text" class="form-control" value="400" id="flight_distance">
-                        </div> 
-                        <div class="form-group col-md-3">
-                            <label class="col-form-label" for="departure_delay_in_minutes">Departure Delay (minutes):</label> <br>
-                            <input type="text" class="form-control" value="30" id="departure_delay_in_minutes">
-                        </div> 
-                        <div class="form-group col-md-3">
-                            <label class="col-form-label" for="arrival_delay_in_minutes">Arrival Delay (minutes):</label> <br>
-                            <input type="text" class="form-control" value="30" id="arrival_delay_in_minutes">
-                        </div>  
-
-                </div>
-<hr style="color:lightgray; border-width: 3px;">
-<div class="container-fluid">
-<div class="row">
-<div class="col-md-12">
-    <h2 id="output"></h2>
-</div>
-</div>
-</div>
-</div>
+      </div>
+    </div> 
+    <hr style="color:lightgray; border-width: 3px;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="output"></h2>
+          </div>
+        </div>
+      </div>
+       
 
 
 </body>
