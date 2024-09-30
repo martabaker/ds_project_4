@@ -56,28 +56,28 @@ def predictions():
     print(content)
 
     # parse
-    gender = content["gender"]
-    customer_type = content["customer_type"]
+    gender = int(content["gender"])
+    customer_type = int(content["customer_type"])
     age = int(content["age"])
-    type_of_travel = content["type_of_travel"]
+    type_of_travel = int(content["type_of_travel"])
     travel_class = content["travel_class"]
-    flight_distance = int(content["flight_distance"])
-    inflight_wifi_service = content["inflight_wifi_service"]
-    departure_arrival_time_convenient = content["departure_arrival_time_convenient"]
-    ease_of_online_booking = content["ease_of_online_booking"]
-    gate_location = content["gate_location"]
-    food_and_drink = content["food_and_drink"]
-    online_boarding = content["online_boarding"]
-    seat_comfort = content["seat_comfort"]
-    inflight_entertainment = content["inflight_entertainment"]
-    on_board_service = content["on_board_service"]
-    leg_room_service = content["leg_room_service"]
-    baggage_handling = content["baggage_handling"]
-    checkin_service = content["checkin_service"]
-    inflight_service = content["inflight_service"]
-    cleanliness = content["cleanliness"]
-    departure_delay_in_minutes = int(content["departure_delay_in_minutes"])
-    arrival_delay_in_minutes = float(content["arrival_delay_in_minutes"])
+    flight_distance = content["flight_distance"]
+    inflight_wifi_service = int(content["inflight_wifi_service"])
+    departure_arrival_time_convenient = int(content["departure_arrival_time_convenient"])
+    ease_of_online_booking = int(content["ease_of_online_booking"])
+    gate_location = int(content["gate_location"])
+    food_and_drink = int(content["food_and_drink"])
+    online_boarding = int(content["online_boarding"])
+    seat_comfort = int(content["seat_comfort"])
+    inflight_entertainment = int(content["inflight_entertainment"])
+    on_board_service = int(content["on_board_service"])
+    leg_room_service = int(content["leg_room_service"])
+    baggage_handling = int(content["baggage_handling"])
+    checkin_service = int(content["checkin_service"])
+    inflight_service = int(content["inflight_service"])
+    cleanliness = int(content["cleanliness"])
+    departure_delay_in_minutes = content["departure_delay_in_minutes"]
+    arrival_delay_in_minutes =  content["arrival_delay_in_minutes"]
 
     preds = modelHelper.predictions(gender, customer_type, age, type_of_travel, travel_class, flight_distance, inflight_wifi_service, departure_arrival_time_convenient,
                ease_of_online_booking, gate_location, food_and_drink, online_boarding, seat_comfort, inflight_entertainment, on_board_service,
