@@ -49,6 +49,8 @@ For one of the modeling notebooks:
     - Grid searches were conducted to optimize hyperparameters for LightGBM and XGBoost.
     - Results for LightGBM with one-hot encoded features yielded a mean accuracy of 96.46%, mean F1 score of 95.84%, mean precision of 97.57%, mean recall of 94.17%, and mean ROC AUC of 99.53%.
 
+![alt text](./Images/Models.PNG)
+
 Web Application
 ---
 In addition to the visualizations, we developed a web application using Flask. This application incorporates:
