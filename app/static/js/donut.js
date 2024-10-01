@@ -115,8 +115,7 @@ function donutPredictions() {
 //           },
 //         height: 400,
 //         width: 600,
-//         showlegend: false,
-//         grid: {rows: 1, columns: 2}
+//         showlegend: false
 //       };
       
 //       Plotly.newPlot('donut', data, layout);  
@@ -130,21 +129,25 @@ function buildDonut(prob) {
     var data = [{
         values: [satis, unsatis],
         labels: ['Satisfied', 'Unsatisfied'],
-        hole: .4,
+        hole: .6,
+        marker: {
+            colors: ['#45CAFF', '#FF1B6B']
+          },
+        textinfo: "label+percent",
         type: 'pie'
     }];
     
     var layout = {
         title: 'Passenger Satisfaction',
         annotations: [{
-            font: { size: 20 },
+            font: { size: 30 },
             showarrow: false,
             text: 'Satisfaction',
-            x: 0.17,
+            x: 0.5,
             y: 0.5
         }],
-        height: 400,
-        width: 600,
+        height: 800,
+        width: 1200,
         showlegend: false
     };
     
