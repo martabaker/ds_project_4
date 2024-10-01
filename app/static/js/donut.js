@@ -3,7 +3,6 @@ $(document).ready(function() {
 
     $("#filter").click(function() {
         donutPredictions();
-        buildDonut(data);
     });
 });
 
@@ -61,7 +60,7 @@ function donutPredictions() {
     // Perform a POST request to the query URL
     $.ajax({
         type: "POST",
-        url: "/predictions",
+        url: "/donutPredictions",
         contentType: 'application/json;charset=UTF-8',
         data: JSON.stringify({ "data": payload }),
         success: function(returnedData) {
@@ -75,6 +74,9 @@ function donutPredictions() {
                 $("#output").text(`Unfortunately, the passenger is unlikely to be satisfied with the flight with a satisfaction rating of ${(prob * 100).toFixed(2)}%!.`);
             }
 
+            // Call buildDonut function
+            buildDonut(prob)
+
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("Status: " + textStatus);
@@ -84,39 +86,67 @@ function donutPredictions() {
 
 }
 
-function buildDonut(data){
-    var prob = parseFloat(returnedData["prediction"]);
+// function buildDonut(prob){
     
+//     // Data
+//     var satis = prob;
+//     var unsatis = 1 - prob;
+
+    
+//     var data = {
+//         values: [satis, unsatis],
+//         labels: ['Satisfied', 'Unsatisfied'],
+//         domain: {column: 0},
+//         hoverinfo: 'label+percent+name',
+//         hole: .4,
+//         type: 'pie'
+//       }
+      
+//       var layout = {
+//         title: 'Passenger Satisfaction',
+//         annotations:
+//           {
+//             font: {
+//               size: 20
+//             },
+//             showarrow: false,
+//             x: 0.17,
+//             y: 0.5
+//           },
+//         height: 400,
+//         width: 600,
+//         showlegend: false,
+//         grid: {rows: 1, columns: 2}
+//       };
+      
+//       Plotly.newPlot('donut', data, layout);  
+// };
+
+function buildDonut(prob) {
     // Data
     var satis = prob;
     var unsatis = 1 - prob;
 
-    
-    var data = {
+    var data = [{
         values: [satis, unsatis],
         labels: ['Satisfied', 'Unsatisfied'],
-        domain: {column: 0},
-        hoverinfo: 'label+percent+name',
         hole: .4,
         type: 'pie'
-      }
-      
-      var layout = {
+    }];
+    
+    var layout = {
         title: 'Passenger Satisfaction',
-        annotations:
-          {
-            font: {
-              size: 20
-            },
+        annotations: [{
+            font: { size: 20 },
             showarrow: false,
+            text: 'Satisfaction',
             x: 0.17,
             y: 0.5
-          },
+        }],
         height: 400,
         width: 600,
-        showlegend: false,
-        grid: {rows: 1, columns: 2}
-      };
-      
-      Plotly.newPlot('donut', data, layout);  
-};
+        showlegend: false
+    };
+    
+    Plotly.newPlot('donut', data, layout);  
+}
