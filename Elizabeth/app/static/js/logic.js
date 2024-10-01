@@ -2,7 +2,6 @@ $(document).ready(function() {
     console.log("Page Loaded");
 
     $("#filter").click(function() {
-        // alert("button clicked!");
         predictions();
     });
 });
@@ -76,6 +75,9 @@ function predictions() {
                 $("#output").text(`Unfortunately, the passenger is unlikely to be satisfied with the flight with a satisfaction rating of ${(prob * 100).toFixed(2)}%!.`);
             }
 
+            // Call buildDonut function
+            buildDonut(prob)
+
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("Status: " + textStatus);
@@ -83,4 +85,37 @@ function predictions() {
         }
     });
 
-}
+};
+
+function buildDonut(prob) {
+    // Data
+    var satis = prob;
+    var unsatis = 1 - prob;
+
+    var data = [{
+        values: [satis, unsatis],
+        labels: ['Satisfied', 'Unsatisfied'],
+        hole: .6,
+        marker: {
+            colors: ['#45CAFF', '#FF1B6B']
+          },
+        textinfo: "label+percent",
+        type: 'pie'
+    }];
+    
+    var layout = {
+        title: 'Passenger Satisfaction',
+        annotations: [{
+            font: { size: 30 },
+            showarrow: false,
+            text: 'Satisfaction',
+            x: 0.5,
+            y: 0.5
+        }],
+        height: 600,
+        width: 1000,
+        showlegend: false
+    };
+    
+    Plotly.newPlot('donut', data, layout);  
+};

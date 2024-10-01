@@ -8,7 +8,6 @@ $(document).ready(function() {
 
 // call Flask API endpoint
 function donutPredictions() {
-    // Obtener valores del formulario
     var gender = $("#gender").val();
     var customer_type = $("#customer_type").val();
     var age = $("#age").val();
@@ -32,7 +31,7 @@ function donutPredictions() {
     var departure_delay_in_minutes = $("#departure_delay_in_minutes").val();
     var arrival_delay_in_minutes = $("#arrival_delay_in_minutes").val();
 
-    // crear el payload
+    // create the payload
     var payload = {
         "gender": gender,
         "customer_type": customer_type,
@@ -56,28 +55,38 @@ function donutPredictions() {
         "cleanliness": cleanliness,
         "departure_delay_in_minutes": departure_delay_in_minutes,
         "arrival_delay_in_minutes": arrival_delay_in_minutes
-    };
+    }
 
-    // Realizar una solicitud POST al endpoint de Flask
+    // Perform a POST request to the query URL
     $.ajax({
         type: "POST",
-        url: "/donutPredictions", // Cambié a /donutPredictions
+        url: "/donutPredictions",
         contentType: 'application/json;charset=UTF-8',
         data: JSON.stringify({ "data": payload }),
         success: function(returnedData) {
-            // Imprimirlo
+            // print it
             console.log(returnedData);
             var prob = parseFloat(returnedData["prediction"]);
-            buildDonut(prob);
+
+            if (prob > 0.5) {
+                $("#output").text(`The passenger is likely to be satisfied with the flight with a satisfaction rating of ${(prob * 100).toFixed(2)}%!!`);
+            } else {
+                $("#output").text(`Unfortunately, the passenger is unlikely to be satisfied with the flight with a satisfaction rating of ${(prob * 100).toFixed(2)}%!.`);
+            }
+
+            // Call buildDonut function
+            buildDonut(prob)
+
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("Status: " + textStatus);
             alert("Error: " + errorThrown);
         }
     });
-}
 
-function buildDonut(prob){
+};
+
+function buildDonut(prob) {
     // Data
     var satis = prob;
     var unsatis = 1 - prob;
@@ -85,18 +94,18 @@ function buildDonut(prob){
     var data = [{
         values: [satis, unsatis],
         labels: ['Satisfied', 'Unsatisfied'],
-        domain: {column: 0},
-        hoverinfo: 'label+percent+name',
-        hole: .4,
+        hole: .6,
+        marker: {
+            colors: ['#45CAFF', '#FF1B6B']
+          },
+        textinfo: "label+percent",
         type: 'pie'
     }];
-      
+    
     var layout = {
         title: 'Passenger Satisfaction',
         annotations: [{
-            font: {
-                size: 20
-            },
+            font: { size: 30 },
             showarrow: false,
             text: 'Satisfaction',
             x: 0.5,
@@ -104,9 +113,8 @@ function buildDonut(prob){
         }],
         height: 400,
         width: 600,
-        showlegend: false,
-        grid: {rows: 1, columns: 2}
+        showlegend: false
     };
-      
+    
     Plotly.newPlot('donut', data, layout);  
-}
+};

@@ -88,7 +88,7 @@ def predictions():
 # HTML ROUTES - temp
 @app.route("/donut")
 def donut():
-    return render_template("donut.html")
+    return render_template("temp.html")
 
 @app.route("/donutPredictions", methods=["POST"])
 def donutPredictions():
