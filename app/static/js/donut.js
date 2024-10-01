@@ -111,8 +111,8 @@ function buildDonut(prob) {
             x: 0.5,
             y: 0.5
         }],
-        height: 800,
-        width: 1200,
+        height: 400,
+        width: 600,
         showlegend: false
     };
     
