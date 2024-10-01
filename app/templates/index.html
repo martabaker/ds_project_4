@@ -379,67 +379,19 @@
   </div>
 
         <hr style="color:lightgray; border-width: 3px;">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
                     <h2 id="output"></h2>
                 </div>
             </div>
         </div>
+        <hr>
         <div class="container">
-            <h2>Passenger Satisfaction Distribution</h2>
-            <canvas id="satisfactionChart" width="200" height="200"></canvas>
+          <div class="row justify-content-center">
+            <h2 class="text-center">Passenger Satisfaction Distribution</h2>
+            <div id="donut" width="500" height="500"></div>
+          </div>
         </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-            const ctx = document.getElementById('satisfactionChart').getContext('2d');
-            const satisfactionChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Satisfied', 'Neutral', 'Dissatisfied'],
-                    datasets: [{
-                        label: 'Passenger Satisfaction',
-                        data: [70, 20, 10], // Initial values
-                        backgroundColor: [
-                            'rgba(75, 192, 192, 0.6)',
-                            'rgba(255, 206, 86, 0.6)',
-                            'rgba(255, 99, 132, 0.6)'
-                        ],
-                        borderColor: [
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(255, 99, 132, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Passenger Satisfaction'
-                        }
-                    }
-                }
-            });
-
-            // Update the chart with simulated data on button click
-            document.getElementById('filter').addEventListener('click', function() {
-                const satisfied = Math.floor(Math.random() * 100);
-                const neutral = Math.floor(Math.random() * (100 - satisfied));
-                const dissatisfied = 100 - satisfied - neutral;
-
-                satisfactionChart.data.datasets[0].data = [satisfied, neutral, dissatisfied];
-                satisfactionChart.update();
-
-                // Update output text
-                document.getElementById('output').textContent = `Satisfied: ${satisfied}%, Neutral: ${neutral}%, Dissatisfied: ${dissatisfied}%`;
-            });
-        </script>
     </body>
 </html>

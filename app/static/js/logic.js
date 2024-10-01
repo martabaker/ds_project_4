@@ -94,8 +94,8 @@ function buildDonut(prob) {
 
     var data = [{
         values: [satis, unsatis],
-        labels: ['Satisfied', 'Unsatisfied'],
-        hole: .6,
+        labels: ['Satisfied', 'Unsatisfied or Neutral'],
+        hole: .5,
         marker: {
             colors: ['#45CAFF', '#FF1B6B']
           },
@@ -104,7 +104,6 @@ function buildDonut(prob) {
     }];
     
     var layout = {
-        title: 'Passenger Satisfaction',
         annotations: [{
             font: { size: 30 },
             showarrow: false,
