@@ -2,7 +2,6 @@ $(document).ready(function() {
     console.log("Page Loaded");
 
     $("#filter").click(function() {
-        // alert("button clicked!");
         predictions();
     });
 });
@@ -83,4 +82,4 @@ function predictions() {
         }
     });
 
-}
+};

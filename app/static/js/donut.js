@@ -84,42 +84,7 @@ function donutPredictions() {
         }
     });
 
-}
-
-// function buildDonut(prob){
-    
-//     // Data
-//     var satis = prob;
-//     var unsatis = 1 - prob;
-
-    
-//     var data = {
-//         values: [satis, unsatis],
-//         labels: ['Satisfied', 'Unsatisfied'],
-//         domain: {column: 0},
-//         hoverinfo: 'label+percent+name',
-//         hole: .4,
-//         type: 'pie'
-//       }
-      
-//       var layout = {
-//         title: 'Passenger Satisfaction',
-//         annotations:
-//           {
-//             font: {
-//               size: 20
-//             },
-//             showarrow: false,
-//             x: 0.17,
-//             y: 0.5
-//           },
-//         height: 400,
-//         width: 600,
-//         showlegend: false
-//       };
-      
-//       Plotly.newPlot('donut', data, layout);  
-// };
+};
 
 function buildDonut(prob) {
     // Data
@@ -152,4 +117,4 @@ function buildDonut(prob) {
     };
     
     Plotly.newPlot('donut', data, layout);  
-}
+};
