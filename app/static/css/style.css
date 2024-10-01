@@ -1,0 +1,15 @@
+/* Navbar sizing */
+.navbar-nav h4 {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    /* Add any other styling you want for all h4 elements in the navbar */
+  }
+  
+.navbar-nav .nav-link.active {
+font-size: 1.5rem; /* Match the font size of the other h4 elements */
+/* Add any other styling for the active link */
+}
+  
+.card {
+align-items: center;
+justify-content: center;
+}
