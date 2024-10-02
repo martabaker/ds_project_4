@@ -48,7 +48,7 @@ For one of the modeling notebooks:
 
     - Grid searches were conducted to optimize hyperparameters for LightGBM, XGBoost, and Gradient Boosting models.
     - Results for LightGBM with binned, scaled, and one-hot encoded features yielded a mean accuracy of 96.50%, mean F1 score of 96.54%, mean precision of 97.52%, mean recall of 94.35%, and mean ROC AUC of 99.53%.
-    - Results for GB with the same preprocessing yielded a mean accuracy of 95.89%, mean F1 score of 96.54%, mean precision of 97.52%, mean recall of 94.35%, and mean ROC AUC of 99.33%.
+    - Results for GB with the same preprocessing yielded a mean accuracy of 95.89%, mean F1 score of 95.20%, mean precision of 96.73%, mean recall of 93.72%, and mean ROC AUC of 99.33%.
 
 ![alt text](./Images/Model_FI.PNG)
 

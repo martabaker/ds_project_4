@@ -105,9 +105,9 @@ function buildDonut(prob) {
     
     var layout = {
         annotations: [{
-            font: { size: 30 },
+            font: { size: 22 },
             showarrow: false,
-            text: 'Satisfaction',
+            text: 'Satisfaction Rating',
             x: 0.5,
             y: 0.5
         }],
