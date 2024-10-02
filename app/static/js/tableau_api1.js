@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 function initializeViz() {
     var placeholderDiv = document.getElementById("tableauViz");
-    var url = "https://public.tableau.com/views/DataApr2024CitibikeProject/CitibikeStory";
+    var url = "https://public.tableau.com/views/Project_17276318112160/DashboardOption1";
     var options = {
         width: placeholderDiv.offsetWidth,
         height: placeholderDiv.offsetHeight,
