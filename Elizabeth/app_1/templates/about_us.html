@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #e7f1ff; /* Light blue background */
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .about-block {
+            margin: 20px 0; /* Spacing between team members */
+            border: 1px solid #004085; /* Border around each block */
+            border-radius: 10px; /* Rounded corners */
+            padding: 15px; /* Padding inside the blocks */
+            background-color: white; /* White background for contrast */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        h1, h3 {
+            color: #004085; /* Darker blue text */
+        }
+        img {
+            border-radius: 10px; /* Rounded corners for images */
+            max-width: 80%; /* Limit the width to 80% */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Space below images */
+        }
+        a {
+            color: #004085; /* Darker blue links */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.3s; /* Smooth color transition */
+        }
+        a:hover {
+            color: #ffc107; /* Change link color on hover */
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #004085; /* Dark blue footer */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-plane"></i> Airplane Satisfaction
+            </a>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tableau2">Airline Satisfaction</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tableau1">Demographic Satisfaction</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/model">Passenger Satisfaction Predictor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/report">Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/about_us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sources">Sources</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1><strong>ABOUT OUR TEAM</strong></h1>
+                <br/>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 about-block text-center">
+                <h3>Marta Baker</h3> 
+                <img src="static/images/Marta.jpg" alt="Marta Baker">
+                <a href="https://www.linkedin.com/in/marta-baker-409033a8/" target="_blank">LinkedIn</a>
+                <br><a href="https://github.com/martabaker" target="_blank">GitHub</a>
+            </div>
+
+            <div class="col-md-4 about-block text-center">
+                <h3>Sarah Chauvin</h3> 
+                <img src="static/images/Sarah.jpeg" alt="Sarah Chauvin">
+                <a href="https://www.linkedin.com/in/sarah-chauvin-3824992a2/" target="_blank">LinkedIn</a>
+                <br/><a href="https://github.com/RedRajah13" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-4 about-block text-center">
+                <h3>Elizabeth Viramontes</h3> 
+                <img src="static/images/Elizabeth.jpg" alt="Elizabeth Viramontes">
+                <a href="https://www.linkedin.com/in/elizabeth-viramontes-828a76249/" target="_blank">LinkedIn</a>
+                <br/><a href="https://github.com/ElizabethVira" target="_blank">GitHub</a>
+            </div>
+
+            <div class="col-md-4 about-block text-center">
+                <h3>Gabriela Zarate</h3> 
+                <img src="static/images/Gabriela.png" alt="Gabriela Zarate">
+                <a href="https://www.linkedin.com/in/gabriela-zarate-098252248" target="_blank">LinkedIn</a>
+                <br/><a href="https://github.com/gabrielaza22" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Airplane Satisfaction ML. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
+
