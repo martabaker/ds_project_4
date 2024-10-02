@@ -2,64 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passenger Satisfaction Predictor</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            background-color: #f0f8ff; /* Light background color */
-        }
-        .navbar {
-            margin-bottom: 20px;
-        }
-        .card {
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #004085; /* Dark blue footer */
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- JS -->
-    <script type="text/javascript" src="static/js/logic.js"></script>
-    <!-- D3 and Plotly -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset="utf-8">
+  <title>Airplane Satisfaction ML</title>
+  <!-- Boostrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- JS -->
+  <script type="text/javascript" src="static/js/logic.js"></script>
+  <!-- D3 and Plotly -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <i class="fas fa-plane"></i> Flight Satisfaction Home
-            </a>
-            <ul class="navbar-nav me-auto">
-                <!-- <li class="nav-item"><a class="nav-link" href="/">Home</a></li> -->
-                <li class="nav-item"><a class="nav-link" href="/tableau2">Airline Satisfaction</a></li>
-                <li class="nav-item"><a class="nav-link" href="/tableau1">Demographic Satisfaction</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/model">Passenger Satisfaction Predictor</a></li>
-                <li class="nav-item"><a class="nav-link" href="/report">Report</a></li>
-                <li class="nav-item"><a class="nav-link" href="/about_us">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="/sources">Sources</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" data-bs-theme="dark">
+    <div class="container-fluid justify-content-end">
+      <a class="navbar-brand" href="/"></a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/tableau1">Tableau Dashboard 1</a>
+        </li>
+        <li class="nav-item"></li>
+        <a class="nav-link" href="/tableau2">Tableau Dashboard 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/model">Machine Learning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/report">Report</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about_us">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sources">Sources</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<!-- Machine Learning Application -->
-<div class="text-center">
+  <!-- Machine Learning Application -->
+  <div class="text-center">
     <br>
     <p style="font-size:30px">Passenger Satisfaction Predictor</p>
     <hr>
@@ -131,7 +123,7 @@
                     </div>
                   </div>
               </div>
-              <!-- <br> -->
+              <br>
               <div class="row justify-content-center">
                   <!-- Convenient Departure/Arrival Time -->
                   <div class="col-md-3.5">
@@ -204,7 +196,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- <br> -->
+                <br>
                 <div class="row justify-content-center">
                   <!-- Seat Comfort -->
                   <div class="col-md-2">
@@ -291,7 +283,7 @@
                     </div>
                   </div>
               </div>
-              <!-- <br> -->
+              <br>
               <div class="row justify-content-center">
                   <!-- Baggage Handling -->
                   <div class="col-md-2.5">
@@ -387,19 +379,67 @@
   </div>
 
         <hr style="color:lightgray; border-width: 3px;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10">
+        <div class="container-fluid justify-content-center">
+            <div class="row">
+                <div class="col-md-8">
                     <h2 id="output"></h2>
                 </div>
             </div>
         </div>
-        <hr>
         <div class="container">
-          <div class="row justify-content-center">
-            <h2 class="text-center mb-0">Passenger Satisfaction Distribution</h2>
-            <div id="donut" width="500" height="500"></div>
-          </div>
+            <h2>Passenger Satisfaction Distribution</h2>
+            <canvas id="satisfactionChart" width="200" height="200"></canvas>
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const ctx = document.getElementById('satisfactionChart').getContext('2d');
+            const satisfactionChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Satisfied', 'Neutral', 'Dissatisfied'],
+                    datasets: [{
+                        label: 'Passenger Satisfaction',
+                        data: [70, 20, 10], // Initial values
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.6)',
+                            'rgba(255, 206, 86, 0.6)',
+                            'rgba(255, 99, 132, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(255, 99, 132, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Passenger Satisfaction'
+                        }
+                    }
+                }
+            });
+
+            // Update the chart with simulated data on button click
+            document.getElementById('filter').addEventListener('click', function() {
+                const satisfied = Math.floor(Math.random() * 100);
+                const neutral = Math.floor(Math.random() * (100 - satisfied));
+                const dissatisfied = 100 - satisfied - neutral;
+
+                satisfactionChart.data.datasets[0].data = [satisfied, neutral, dissatisfied];
+                satisfactionChart.update();
+
+                // Update output text
+                document.getElementById('output').textContent = `Satisfied: ${satisfied}%, Neutral: ${neutral}%, Dissatisfied: ${dissatisfied}%`;
+            });
+        </script>
     </body>
 </html>

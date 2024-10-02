@@ -41,15 +41,16 @@ For one of the modeling notebooks:
 - *Model Comparison:*
 
     - Five separate pipelines were tested to evaluate the impact of encoding methods on model performance.
-    - Models compared included Logistic Regression, ADA Boost Classifier, Gradient Boosting Classifier, XGBoost Classifier, and LightGBM.
-    - The best-performing models were Gradient Boosting, XGBoost, and LightGBM, with LightGBM emerging as the top choice due to its balanced feature importance.
+    - Models compared included Logistic Regression, Random Forest, Extra Trees Classifier, K-Nearest Neighbors CLassifier, Adaptive Boost Classifier, Gradient Boosting Classifier, Extra Gradient Boosting Classifier, and Light Gradient Boosting Model.
+    - The best-performing models were Gradient Boosting, XGBoost, and LightGBM, with LightGBM emerging as the top choice due to its balanced feature importances and slightly higher metrics.
 
 - *Grid Search and Cross Validation:*
 
-    - Grid searches were conducted to optimize hyperparameters for LightGBM and XGBoost.
-    - Results for LightGBM with one-hot encoded features yielded a mean accuracy of 96.46%, mean F1 score of 95.84%, mean precision of 97.57%, mean recall of 94.17%, and mean ROC AUC of 99.53%.
+    - Grid searches were conducted to optimize hyperparameters for LightGBM, XGBoost, and Gradient Boosting models.
+    - Results for LightGBM with binned, scaled, and one-hot encoded features yielded a mean accuracy of 96.50%, mean F1 score of 96.54%, mean precision of 97.52%, mean recall of 94.35%, and mean ROC AUC of 99.53%.
+    - Results for GB with the same preprocessing yielded a mean accuracy of 95.89%, mean F1 score of 96.54%, mean precision of 97.52%, mean recall of 94.35%, and mean ROC AUC of 99.33%.
 
-![alt text](./Images/Models.PNG)
+![alt text](./Images/Model_FI.PNG)
 
 Web Application
 ---
