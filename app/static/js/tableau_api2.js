@@ -24,8 +24,8 @@ function initializeViz() {
     var placeholderDiv = document.getElementById("tableauViz");
     var url = "https://public.tableau.com/shared/N4NQ8GSH8";
     var options = {
-        width: placeholderDiv.offsetWidth,
-        height: placeholderDiv.offsetHeight,
+        // width: placeholderDiv.offsetWidth,
+        // height: placeholderDiv.offsetHeight,
         hideTabs: true,
         hideToolbar: true,
         onFirstInteractive: function() {
