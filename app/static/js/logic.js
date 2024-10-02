@@ -65,7 +65,7 @@ function predictions() {
         contentType: 'application/json;charset=UTF-8',
         data: JSON.stringify({ "data": payload }),
         success: function(returnedData) {
-            // print it
+            // print it for debugging
             console.log(returnedData);
             var prob = parseFloat(returnedData["prediction"]);
 
@@ -85,7 +85,7 @@ function predictions() {
         }
     });
 
-};
+}
 
 function buildDonut(prob) {
     // Data
