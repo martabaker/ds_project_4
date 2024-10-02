@@ -95,7 +95,7 @@ function buildDonut(prob) {
     var data = [{
         values: [satis, unsatis],
         labels: ['Satisfied', 'Unsatisfied or Neutral'],
-        hole: .5,
+        hole: .4,
         marker: {
             colors: ['#45CAFF', '#FF1B6B']
           },
