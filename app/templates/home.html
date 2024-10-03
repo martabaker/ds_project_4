@@ -22,8 +22,16 @@
         }
         h4 {
             font-style: italic;
-            color: #004085; /* Darker blue text */
+            color: #003366; /* Darker blue text */
             margin: 20px 0; /* Margin for spacing */
+            text-transform: none; /* Prevents uppercase transformation */
+            font-size: 1.8em; /* Increase font size */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Shadow effect */
+        }
+        .call-to-action {
+            font-size: 1.5em; /* Increase size of paragraphs */
+            color: #003366; /* Darker text color */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Shadow effect */
         }
         .navbar {
             margin-bottom: 20px;
@@ -46,6 +54,16 @@
         .container {
             padding: 20px; /* Add padding around the content */
         }
+        .scroll-icon {
+            font-size: 1.5em; /* Size of the scroll icon */
+            animation: bounce 1s infinite; /* Add bounce animation */
+            margin-left: 10px; /* Space between text and icon */
+            vertical-align: middle; /* Aligns icon with text */
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
     </style>
 </head>
 
@@ -56,9 +74,6 @@
                 <i class="fas fa-plane"></i> Flight Satisfaction Home
             </a>
             <ul class="navbar-nav me-auto">
-                <!-- <li class="nav-item"></li>
-                    <a class="nav-link active" href="/">Home</a>
-                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="/tableau2">Airline Satisfaction</a>
                 </li>
@@ -90,7 +105,13 @@
         <br>
         <div class="row justify-content-center">
             <div class="col-md-10 text-center">
-                <h4>Please use this webpage to see how passengers rate flights and airlines. Using previous passenger surveys, you can predict if existing passengers were satisfied by inputting survey values.</h4>
+                <h4>Welcome to Our Page!</h4>
+                <p class="call-to-action">Explore the world of passenger satisfaction!</p>
+                <p class="call-to-action">On this website, you'll discover how passengers rate their experiences with flights and airlines.</p>
+                <p class="call-to-action">Using previous passenger surveys, we offer you the opportunity to predict the satisfaction level of current passengers simply by inputting survey data.</p>
+                <p class="call-to-action">Dive into the data and find out how to enhance the flying experience! 
+                    <i class="fas fa-arrow-up scroll-icon" onclick="window.scrollTo(0, 0);"></i>
+                </p>
             </div>
         </div>
     </div>

@@ -5,9 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sources</title>
-    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -15,14 +13,6 @@
         }
         .navbar {
             margin-bottom: 20px;
-        }
-        .iframe-container {
-            margin: 20px auto;
-            padding: 15px;
-            background-color: white; /* White background for contrast */
-            border: 1px solid #004085; /* Border around the iframe */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
         footer {
             text-align: center;
@@ -33,11 +23,41 @@
             bottom: 0;
             width: 100%;
         }
+        .citation-list {
+            list-style-type: none; /* Remove default bullets */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+            font-size: 1.4em; /* Increase font size */
+        }
+        .citation-list li {
+            margin-bottom: 15px; /* Increase space between items */
+            position: relative; /* Position for pseudo-element */
+            padding-left: 40px; /* Increase space for the custom bullet */
+        }
+        .citation-list li::before {
+            content: "\f072"; /* Font Awesome airplane icon */
+            font-family: "Font Awesome 5 Free"; /* Specify font family */
+            font-weight: 900; /* Make icon bold */
+            position: absolute; /* Positioning */
+            left: 0; /* Align to left */
+            color: #004085; /* Color of the icon */
+            font-size: 1.5em; /* Icon size */
+        }
+        .combined-container {
+            display: flex;
+            justify-content: space-between; /* Space between text and image */
+            align-items: center; /* Center items vertically */
+            margin-top: 20px; /* Add space above the combined section */
+            background-color: white; /* White background */
+            padding: 20px; /* Padding around the container */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        h1 {
+            font-size: 2.5em; /* Larger heading */
+            margin-bottom: 20px; /* Space below the heading */
+        }
     </style>
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- JS -->
-    <script type="text/javascript" src="static/js/logic.js"></script>
 </head>
 
 <body>
@@ -47,7 +67,6 @@
                 <i class="fas fa-plane"></i> Flight Satisfaction Home
             </a>
             <ul class="navbar-nav me-auto">
-                <!-- <li class="nav-item"><a class="nav-link" href="/">Home</a></li> -->
                 <li class="nav-item"><a class="nav-link" href="/tableau2">Airline Satisfaction</a></li>
                 <li class="nav-item"><a class="nav-link" href="/tableau1">Demographic Satisfaction</a></li>
                 <li class="nav-item"><a class="nav-link" href="/model">Passenger Satisfaction Predictor</a></li>
@@ -62,45 +81,33 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h1><strong>Sources</strong></h1>
-                <br/>
             </div>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-              <ul class="citation-list">
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+        <div class="combined-container">
+            <div class="col-md-6">
                 <ul class="citation-list">
-                  <li>
-                      <a href="https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction" target="_blank">Airline Passenger Satisfaction on Kaggle</a> - Last Updated 2020
-                  </li>
-                  <li>
-                      <a href="https://www.kaggle.com/datasets/johndddddd/customer-satisfaction" target="_blank">Original Dataset</a> - Last Updated 2018
-                  </li>
-                  <li>
-                    <a href="https://www.kaggle.com/datasets/khushipitroda/airline-reviews" target="_blank">Airline Satisfaction on Kaggle</a> - Last Updated 2023
-                  </li>
-                  <li>
-                      <a href="https://rpubs.com/gissellanadya/LBB-Airlines" target="_blank">Column Explanation and Homepage Image</a> - Published 2019
-                  </li>
-                  <li>
-                      <a href="https://www.kaggle.com/code/bejondbirthday/flight-satisfaction-prediction" target="_blank">Sample Predition from Kaggle</a> - Published 2024
-                  </li>
-              </ul>
-              <br/>
-              <br/>
-              <br/>
-          </div>
-          <div class="col-md-6">
-              <img src="/static/images/Airplane.jpg" style="max-width: 100%; height: auto;"/>
-          </div>
-      </div>
-  </div>
-  <br>
-  <br>
+                    <li>
+                        <a href="https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction" target="_blank">Airline Passenger Satisfaction on Kaggle</a> - Last Updated 2020
+                    </li>
+                    <li>
+                        <a href="https://www.kaggle.com/datasets/johndddddd/customer-satisfaction" target="_blank">Original Dataset</a> - Last Updated 2018
+                    </li>
+                    <li>
+                        <a href="https://www.kaggle.com/datasets/khushipitroda/airline-reviews" target="_blank">Airline Satisfaction on Kaggle</a> - Last Updated 2023
+                    </li>
+                    <li>
+                        <a href="https://rpubs.com/gissellanadya/LBB-Airlines" target="_blank">Column Explanation and Homepage Image</a> - Published 2019
+                    </li>
+                    <li>
+                        <a href="https://www.kaggle.com/code/bejondbirthday/flight-satisfaction-prediction" target="_blank">Sample Prediction from Kaggle</a> - Published 2024
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 image-container text-center">
+                <img src="/static/images/Airplane.jpg" style="max-width: 100%; height: auto;"/>
+            </div>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2024 Airplane Satisfaction ML. All rights reserved.</p>
     </footer>
