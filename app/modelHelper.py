@@ -4,7 +4,8 @@ import numpy as np
 
 class ModelHelper():
     def __init__(self):
-        pass
+        # model
+        self.model = pickle.load(open("model_pipeline.pkl", 'rb'))
 
     def predictions(self, gender, customer_type, age, type_of_travel, travel_class, flight_distance, inflight_wifi_service, departure_arrival_time_convenient,
                ease_of_online_booking, gate_location, food_and_drink, online_boarding, seat_comfort, inflight_entertainment, on_board_service,
@@ -34,9 +35,6 @@ class ModelHelper():
         df["departure_delay_in_minutes"] = [departure_delay_in_minutes]
         df["arrival_delay_in_minutes"] = [arrival_delay_in_minutes]
         
-        # model
-        model = pickle.load(open("model_pipeline.h5", 'rb'))
-        
         # columns in order
         df = df.loc[:, ['gender', 'customer_type', 'age', 'type_of_travel',
         'travel_class', 'flight_distance', 'inflight_wifi_service',
@@ -46,5 +44,5 @@ class ModelHelper():
         'baggage_handling', 'checkin_service', 'inflight_service',
         'cleanliness', 'departure_delay_in_minutes', 'arrival_delay_in_minutes']]
         
-        preds = model.predict_proba(df)
+        preds = self.model.predict_proba(df)
         return(preds[0][1])
