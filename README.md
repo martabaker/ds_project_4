@@ -62,6 +62,8 @@ In addition to the visualizations, we developed a web application using Flask. T
     - Implementation of machine learning models to predict whether a flight will be satisfactory based on user inputs.
     - The web app includes the code necessary to run predictions, providing users with insights into potential flight satisfaction.
 
+    ![alt text](./Images/web.PNG)
+
 Limitations
 --
 **1. Imbalanced Feature Importance:** There is a significant imbalance in customer loyalty, with five times as many loyal customers as disloyal ones. Additionally, there are more than twice as many business travelers compared to personal travelers.
@@ -81,3 +83,5 @@ Conclusion
 The visualizations created in Tableau, along with the Flask web application, effectively illustrate the evolving landscape of customer satisfaction in the airline industry. By analyzing ratings from 2012 to 2023, we observe a clear trend of declining satisfaction, likely influenced by rising traveler expectations. The interactive dashboards allow users to explore specific airlines and their services, offering valuable insights into customer perceptions.
 
 These visualizations and tools not only tell a compelling story about airline customer satisfaction but also serve as a useful resource for consumers and industry stakeholders aiming to improve service quality and meet evolving customer demands.
+
+![alt text](./Images/sources.PNG)
